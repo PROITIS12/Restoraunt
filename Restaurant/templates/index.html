@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ресторан Senzatetto con una padella</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- Верхний блок с фоновым изображением -->
+  <header class="hero-section">
+    <div class="overlay">
+      <img src="{{ url_for('static', filename='images/Logo2.png') }}" alt="Логотип" class="logo" />
+      <div class="auth-buttons">
+          <a href="{{ url_for('login') }}">Увійти</a>
+          <a href="{{ url_for('register') }}">Реєстрація</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Остальная часть страницы -->
+  <main>
+    <div class="about">
+        <img src="{{ url_for('static', filename='images/Restaurant_Image2.jpg') }}" alt="Ресторан" />
+        <div class="text">
+            <h2>Ресторан "Senzatetto con una padella" чекає саме вас у себе!</h2>
+            <p2>Наш ресторан має багату історію і шикарну Італійську кухню. Ресторан був заснований у 1969 році. До нас зівітало багато знаменитостей. У нас тільки кваліфіковані і добрі працівники, ресторан з розкішнею кухнею Італії. Будемо раді бачити вас у нас!</p2>
+        </div>
+    </div>
+
+    <h3 class="section-title">Знамениті гості які завітали до нас</h3>
+    <div class="guests-scroll">
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/Sponge_bob.jpg') }}" alt="Гість 1" />
+            <p2>Бубка Гоб</p2>
+        </div>
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/1Hryvna.jpg') }}" alt="Гість 2" />
+            <p2>Ярослав Мудрий</p2>
+        </div>
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/Federico_Gorishkin.png') }}" alt="Гість 3" />
+            <p2>Федеріко Горішкін</p2>
+        </div>
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/Watermelon.jpg') }}" alt="Гість 4" />
+            <p2>Арбуз</p2>
+        </div>
+    </div>
+
+    <h3 class="section-title">Наші працівники</h3>
+    <div class="workers">
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/Anastasya_Lascawa.png') }}" alt="Працівник 1" />
+            <p2>Анастасія Ласква</p2>
+        </div>
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/Ivan_Maschalai.png') }}" alt="Працівник 2" />
+            <p2>Іван Мащалай</p2>
+        </div>
+        <div class="person">
+            <img src="{{ url_for('static', filename='images/Danila_Goliy.png') }}" alt="Працівник 3" />
+            <p2>Данило Голий</p2>
+        </div>
+    </div>
+  </main>
+</body>
+</html>

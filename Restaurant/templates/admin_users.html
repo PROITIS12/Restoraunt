@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ: Пользователи</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>Пользователи</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Ім'я</th>
+            <th>Пароль (хеш)</th>
+            <th>Видалити</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+            <td>
+                {% if user.username != "admin" %}
+                <form method="POST" action="{{ url_for('delete_user', user_id=user.id) }}">
+                    <button type="submit">Видалити</button>
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

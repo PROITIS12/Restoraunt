@@ -1,0 +1,489 @@
+body {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+  position: relative;
+  height: 800px;
+  background-image: url('images/Restaurant_Image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 200px;
+  gap: 20px;
+  color: white;
+}
+
+.hero-section .logo {
+  width: 800px;
+}
+
+.hero-section .auth-buttons a {
+  padding: 20px 70px;
+  margin: 0 10px;
+  background-color: #ff914d;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .auth-buttons a:hover {
+  background-color: #e67300;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 200px;
+    background-color: #121212; /* чтобы не просвечивал фон */
+}
+
+.about img {
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.about .text {
+    max-width: 500px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffcc70;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 1.6rem;
+    color: #ffcc70;
+}
+
+.guests-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 0 20px 30px;
+}
+
+.guests-scroll img {
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.workers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.workers img {
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.person p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.auth-background {
+  background: url('/static/images/Restaurant_Image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.auth-container form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+}
+
+.auth-container form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff914d;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-container form button:hover {
+  background-color: #ff7a2c;
+}
+
+.auth-container p {
+  color: #ccc;
+  margin-top: 15px;
+}
+
+.auth-container a {
+  color: #ff914d;
+  text-decoration: none;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+.admin-button {
+    padding: 8px 16px;
+    background-color: #d43f3f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+body {
+    padding-top: 60px;
+}
+
+body.admin-page {
+    padding-top: 100px;
+}
+
+.admin-panel {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+
+.dashboard-body {
+    background-image: url('../static/images/Restaurant_Image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-button-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.admin-button {
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.dashboard-buttons-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-button-block {
+    text-align: center;
+}
+
+.dashboard-button img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-button img:hover {
+    transform: scale(1.1);
+}
+
+.dashboard-button-block p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+
+.menu-body {
+    background-image: url('../static/images/Restaurant_Image.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    color: white;
+}
+
+.menu-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.dishes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dish-card1 {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.dish-card1:hover {
+    transform: scale(1.05);
+}
+
+.dish-card1 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.more-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.more-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+body.dish-detail-page {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+}
+
+.dish-detail-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.dish-card {
+    background-color: rgba(30, 30, 30, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.dish-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.dish-card .description {
+    font-size: 1.1em;
+    margin: 15px 0;
+    color: #ccc;
+}
+
+.dish-card .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+.dish-card input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    font-size: 1em;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.order-button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #4cae4c;
+}
+
+
+.menu-category {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.dish-category-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.admin-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-panel th, .admin-panel td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: center;
+}
+
+.admin-panel th {
+    background-color: #333;
+}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Адмін страви{% endblock %}
+
+{% block content %}
+<div class="admin-panel">
+    <h2>Список страв</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Назва</th>
+                <th>Ціна</th>
+                <th>Категорія</th>
+                <th>Видалити</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dish in dishes %}
+            <tr>
+                <td>{{ dish.id }}</td>
+                <td>{{ dish.name }}</td>
+                <td>{{ dish.price }} грн</td>
+                <td>{{ dish.category }}</td>
+                <td>
+                    <form method="POST" action="{{ url_for('delete_dish', dish_id=dish.id) }}" onsubmit="return confirm('Видалити страву');">
+                        <button type="submit">Видалити</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

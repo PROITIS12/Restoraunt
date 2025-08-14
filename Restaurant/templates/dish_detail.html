@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ dish.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dish-detail-page">
+    {% include 'navbar.html' %}
+
+    <div class="dish-detail-container">
+        <div class="dish-card">
+            <h1>{{ dish.name }}</h1>
+            <img src="{{ url_for('static', filename='images/dishes/' + dish.image) }}" alt="{{ dish.name }}" />
+            <p class="description">{{ dish.description }}</p>
+            <p class="price"><strong>Ціна:</strong> {{ dish.price }} грн</p>
+
+            <form method="POST" action="{{ url_for('add_to_cart', dish_id=dish.id) }}">
+                <label for="quantity">Кількість:</label>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" required />
+
+                <button type="submit" class="order-button">Замовити</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кошик</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="auth-background">
+    {% include 'navbar.html' %}
+    <div class="cart-container">
+        <h1>Ваш кошик</h1>
+        {% if cart_items %}
+            <table>
+                <tr>
+                    <th>Блюдо</th>
+                    <th>Кількість</th>
+                    <th>Ціна (шт)</th>
+                    <th>Сума</th>
+                    <th>Дата</th>
+                </tr>
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.dish.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.dish.price }} грн</td>
+                    <td>{{ item.dish.price * item.quantity }} грн</td>
+                    <td>{{ item.time.strftime('%Y-%m-%d %H:%M') }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <h3>Загальна сума: {{ total_price }} грн</h3>
+            <button>Оформити замовлення</button>
+        {% else %}
+            <p>Ваш кошик порожній.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

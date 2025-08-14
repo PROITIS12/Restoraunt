@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8" />
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="admin-page">
+    {% include 'navbar.html' %}
+    <div class="admin-panel">
+        <h1>Адмін-панель</h1>
+        <div class="admin-buttons">
+            <a href="{{ url_for('admin_orders') }}" class="admin-btn">Замовлення</a>
+            <a href="{{ url_for('admin_users') }}" class="admin-btn">Користувачі</a>
+            <a href="{{ url_for('admin_reservations') }}" class="admin-btn">Бронь</a>
+            <a href="{{ url_for('admin_dishes') }}" class="admin-btn">Страви</a>
+        </div>
+    </div>
+</body>
+</html>

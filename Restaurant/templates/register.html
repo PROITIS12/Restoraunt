@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="auth-background">
+    <div class="auth-container">
+        <h2>Реєстрація</h2>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Имя пользователя" required />
+            <input type="password" name="password" placeholder="Пароль" required />
+            <button type="submit">Зареєструватися</button>
+        </form>
+        <p>Вже маєш аккаунт? <a href="{{ url_for('login') }}">Увійти</a></p>
+    </div>
+</body>
+</html>

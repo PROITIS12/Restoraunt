@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ: Заказы</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>Все заказы</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Користувач</th>
+            <th>Страва</th>
+            <th>Кількість</th>
+            <th>Час</th>
+            <th>Видалити</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.user.username }}</td>
+            <td>{{ order.dish.name }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.time.strftime("%Y-%m-%d %H:%M") }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('delete_order', order_id=order.id) }}">
+                    <button type="submit">Удалить</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

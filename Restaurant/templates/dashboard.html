@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dashboard-body">
+
+    {% if current_user.username == 'admin' %}
+    <div class="admin-button-container">
+        <a href="{{ url_for('admin_panel') }}" class="admin-button">Адмін панель</a>
+    </div>
+    {% endif %}
+
+    <div class="dashboard-buttons-container">
+        <div class="dashboard-button-block">
+            <a href="{{ url_for('menu') }}" class="dashboard-button">
+                <img src="{{ url_for('static', filename='images/menu.png') }}" alt="Меню">
+            </a>
+            <p>Меню</p>
+        </div>
+        <div class="dashboard-button-block">
+            <a href="{{ url_for('reserve_table') }}" class="dashboard-button">
+                <img src="{{ url_for('static', filename='images/reserve.png') }}" alt="Бронь">
+            </a>
+            <p>Бронь</p>
+        </div>
+        <div class="dashboard-button-block">
+            <a href="{{ url_for('cart') }}" class="dashboard-button">
+                <img src="{{ url_for('static', filename='images/karzina.jpg') }}" alt="Кошик">
+            </a>
+            <p>Кошик</p>
+        </div>
+    </div>
+</body>
+</html>
